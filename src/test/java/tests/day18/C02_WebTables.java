@@ -50,12 +50,20 @@ public class C02_WebTables {
         System.out.println("bodyTumDataList : "+bodyTumDataList.size());
     }
 
-    @Test
+    @Test(dependsOnMethods = "login")
     public void printRows() {
         //● printRows( ) metodu oluşturun //tr
         //○ table body'sinde bulunan toplam satir(row) sayısını bulun.
+        hmcWebTablePage=new HMCWebTablePage();
+        System.out.println(hmcWebTablePage.satirlarListesi.size());
 
         //○ Table body'sinde bulunan satirlari(rows) konsolda yazdırın.
+        List<WebElement> satirlarWebElementListesi=hmcWebTablePage.satirlarListesi;
+        for (WebElement each:satirlarWebElementListesi) {
+            System.out.println(each.getText());
+        }
+
         //○ 4.satirdaki(row) elementleri konsolda yazdırın
+        System.out.println("4.satir : "+satirlarWebElementListesi.get(3).getText());
     }
 }
