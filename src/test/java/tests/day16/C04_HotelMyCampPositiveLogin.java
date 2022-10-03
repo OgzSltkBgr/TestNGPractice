@@ -6,7 +6,7 @@ import pages.HotelMyCampPage;
 import utilities.Driver;
 
 public class C04_HotelMyCampPositiveLogin {
-    @Test(groups = {"miniRegression","smoke"})
+    @Test(groups = {"miniRegression,smoke"})
     public void pozitifLoginTesti(){
         // 1- Bir Class olustur: C04_HotelMyCampPositiveLogin
         // 2- Bir test method olustur positiveLoginTest()
