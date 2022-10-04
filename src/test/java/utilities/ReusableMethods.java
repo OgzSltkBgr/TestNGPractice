@@ -175,4 +175,14 @@ public class ReusableMethods {
         });
         return element;
     }
+    public static void jsExecutorScrool(WebElement webElement){
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        // Belirli webElement element seviyesine scroll
+        js.executeScript("arguments[0].scrollIntoView(true);",webElement);
+    }
+    public static void jsExecutorClick(WebElement webElement){
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        // Belirli butonuna js ile click yapalim
+        js.executeScript("arguments[0].click();",webElement);
+    }
 }
